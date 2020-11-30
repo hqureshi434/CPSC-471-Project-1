@@ -35,3 +35,13 @@
  //Close the s ocket
   connection Socket.close()
   */
+
+#include <String>
+#include <stdio>
+
+using namespace std;
+
+
+void server() {
+	int serverPort = 12000
+}

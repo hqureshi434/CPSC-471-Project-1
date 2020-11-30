@@ -24,3 +24,7 @@ data = "Hello world! This is a very long string.”
 	//Close the socket
 	 clientSocket.close()
 */
+
+void client() {
+
+}
