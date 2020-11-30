@@ -1,3 +1,4 @@
+"""
 //Pseudocode (with changes) from the assignment PDF for the server
 /*
 //Server code
@@ -35,13 +36,4 @@
  //Close the s ocket
   connection Socket.close()
   */
-
-#include <String>
-#include <stdio>
-
-using namespace std;
-
-
-void server() {
-	int serverPort = 12000
-}
+"""

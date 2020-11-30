@@ -1,3 +1,4 @@
+"""
 //Pseudocode (with changes) from the assignment PDF for the client
 /*
 //Client code
@@ -13,7 +14,7 @@ clientSocket = socket(AF INET, SOCK STREAM) 11
 clientSocket.connect((serverName, serverPort)) 14
 
 //A string we want to send to the server
-data = "Hello world! This is a very long string.”
+data = "Hello world! This is a very long string.ï¿½
 
 //bytes Sent = 0
 
@@ -24,7 +25,4 @@ data = "Hello world! This is a very long string.”
 	//Close the socket
 	 clientSocket.close()
 */
-
-void client() {
-
-}
+"""
