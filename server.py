@@ -40,7 +40,7 @@ def receive_file(sock):
         return
 
     if fileDataSize == "":
-        print("FaiError retrieving data size")
+        print("Fail Error retrieving data size")
         return
 
     # read payload
