@@ -17,12 +17,12 @@ How to execute:
 	$ py client.py "SERVER MACHINE" "PORT"
 	Example: $ py client.py 127.0.0.1 12000
 
-	List of commands for cli.py:
+	List of commands for client.py:
 	ftp> get "FILE NAME" :	downloads "FILE NAME" from the server
 	ftp> put "FILE NAME" :	uploads "FILE NAME" from the client to the server
 	ftp> ls		     :	lists fils on the server
 	ftp> quit	     :	disconnects and exits
 
 Notes:
-	Client files are read and stored in the cliFiles folder.
-	Server files are read and stored in the servFiles folder.
+	Client files are read and stored in the clientFiles folder.
+	Server files are read and stored in the serverFiles folder.
