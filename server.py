@@ -31,7 +31,7 @@ def receive_file(sock):
     print("Currently connected to: " + addr[0])
 
     # Get sizes
-    filenameSize = receive_data(dataSocket, headerSize)
+    fileNameSize = receive_data(dataSocket, headerSize)
     fileDataSize = receive_data(dataSocket, headerSize)
 
     # error checking
