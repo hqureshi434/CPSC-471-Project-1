@@ -107,7 +107,7 @@ def run(args):
             send_data(cliSocket, query[0])
 
             # get size of response
-            responseSize = receive_data(cliSocket, const.HEADER_SIZE)
+            responseSize = receive_data(cliSocket, headerSize)
 
             if responseSize == "":
                 print("Failed to receive size of response")
