@@ -81,7 +81,7 @@ def run(args):
 
         while True:
 			#Get the query passed in from client
-            query = receive_data(clientSocket, heade)
+            query = receive_data(clientSocket, header)
 
             # get <file name>, downloads <file name> from server
             if query == commands[0]:
