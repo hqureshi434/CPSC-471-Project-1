@@ -19,13 +19,13 @@ def receive_data(sock, size):
         return sock.recv(size).decode("utf-8")
         
 # make data size fit in fixed header size
-def size_padding(data, size):
+def adjustSize(data, size):
     data = str(data)
     while len(data) < size:
         data = "0" + data
     return data
 
-def get_data(sock, fileName):
+def get_data_serv(sock, fileName):
         #Send filename we want to receive 
         sendName = fileName.encode()
         sock.send(sendName)
@@ -55,7 +55,7 @@ def get_data(sock, fileName):
 
         return 0
 
-def send_data(sock):
+def send_data_serv(sock):
         #Receive the file we send
         fileName = sock.recv(40)
         fileName = fileName.decode()

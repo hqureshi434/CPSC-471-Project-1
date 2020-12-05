@@ -1,4 +1,5 @@
 import os, sys, socket
+from datafun import send_data, receive_data, adjustSize, get_data_serv
 
 headerSize = 10
 serverFolder = "./serverFiles/"

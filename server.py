@@ -1,4 +1,5 @@
 import os, sys, socket
+from datafun import send_data, receive_data, adjustSize, send_data_serv
 
 
 headerSize = 10
@@ -84,7 +85,7 @@ def run(args):
 
             # get <file name>, downloads <file name> from server
             if query == commands[0]:
-                giveFromServer(clientSocket)
+                send_data_serv(clientSocket)
 
             # put <file name>, uploads to client
             elif query == commands[1]:
@@ -100,7 +101,7 @@ def run(args):
                 response = response[:-2]
 
                 # Send the response
-                responseSize = size_padding(len(response), headerSize)
+                responseSize = adjustSize(len(response), headerSize)
                 data = responseSize + response
                 send_data(clientSocket, data)
 
