@@ -10,16 +10,16 @@ Language used: Python 3.9.0
 
 How to execute: 
 	Step 1: Run the server that will actively listen for connections.
-	$ py serv.py "PORT"
+	$ py server.py "PORT"
 	Example: $ py server.py 12000
 
 	Step 2: Run the client which will connect to the server.
-	$ py cli.py "SERVER MACHINE" "PORT"
+	$ py client.py "SERVER MACHINE" "PORT"
 	Example: $ py client.py 127.0.0.1 12000
 
 	List of commands for cli.py:
-	ftp> get <FILE NAME> :	downloads <FILE NAME> from the server
-	ftp> put <FILE NAME> :	uploads <FILE NAME> from the client to the server
+	ftp> get "FILE NAME" :	downloads "FILE NAME" from the server
+	ftp> put "FILE NAME" :	uploads "FILE NAME" from the client to the server
 	ftp> ls		     :	lists fils on the server
 	ftp> quit	     :	disconnects and exits
 
