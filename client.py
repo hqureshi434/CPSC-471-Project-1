@@ -89,7 +89,7 @@ def run(args):
                 print("Usage: get <FILE NAME>")
             else:
                 send_data(cliSocket, query[0])
-                getFromServer(cliSocket, query[1])
+                get_data_serv(cliSocket, query[1])
             
         # put <FILE NAME>
         # uploads <FILE NAME> to the server
