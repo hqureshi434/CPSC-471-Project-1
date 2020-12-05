@@ -14,7 +14,7 @@ commands = ["get", "put", "ls", "quit"]
 
 
 
-"""
+
 #Pseudocode (with changes) from the assignment PDF for the client
 #Client code
 #from socket import *
