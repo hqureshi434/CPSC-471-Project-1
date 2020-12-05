@@ -32,7 +32,7 @@ def put_file(sock, address, fileName):
         return
 
     # get data channel port number from server
-    dataPort = receive_data(sock, const.HEADER_SIZE)
+    dataPort = receive_data(sock, headerSize)
 
     # connect to new port
     dataSocket = connect(address, int(dataPort))
