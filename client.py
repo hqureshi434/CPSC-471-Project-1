@@ -73,7 +73,7 @@ def run(args):
 
         # get <FILE NAME>
         # downloads <FILE NAME> from the server
-        if query[0] == const.COMMANDS[0]:
+        if query[0] == commands[0]:
             if len(query) != 2:
                 print("Usage: get <FILE NAME>")
             else:
@@ -82,7 +82,7 @@ def run(args):
             
         # put <FILE NAME>
         # uploads <FILE NAME> to the server
-        elif query[0] == const.COMMANDS[1]:
+        elif query[0] == commands[1]:
             if len(query) != 2:
                 print("Usage: put <FILE NAME>")
             else:
@@ -91,7 +91,7 @@ def run(args):
             
         # ls
         # lists files on the server
-        elif query[0] == const.COMMANDS[2]:
+        elif query[0] == commands[2]:
             # send query
             send_data(cliSocket, query[0])
 
@@ -106,7 +106,7 @@ def run(args):
 
         # quit
         # disconnects from the server and exits
-        elif query[0] == const.COMMANDS[3]:
+        elif query[0] == commands[3]:
             send_data(cliSocket, query[0])
             cliSocket.close()
             print("Connection closed")
