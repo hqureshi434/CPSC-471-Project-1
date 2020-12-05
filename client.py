@@ -43,8 +43,8 @@ def put_file(sock, address, fileName):
         return
     
     # make file size and file name headers
-    fileNameSize = size_padding(len(fileName), headerSize)
-    fileDataSize = size_padding(fileSize, headerSize)
+    fileNameSize = adjustSize(len(fileName), headerSize)
+    fileDataSize = adjustSize(fileSize, headerSize)
     fileData = userFile.read()
     
     # add headers to payload
