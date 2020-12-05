@@ -46,7 +46,7 @@ def get_data_serv(sock, fileName):
                         break
 
         #Open file path and create file of received data
-        filePath = os.path.join(const.CLIENT_FOLDER, fileName)
+        filePath = os.path.join(CLIENT_FOLDER, fileName)
         fileData = open(filePath, "w")
         fileData.write(tempMsg)
 
@@ -61,7 +61,7 @@ def send_data_serv(sock):
         fileName = fileName.decode()
         
         #Find file, store it to send
-        filePath = os.path.join(const.SERVER_FOLDER, fileName)
+        filePath = os.path.join(SERVER_FOLDER, fileName)
         fileData = open(filePath)
         content = fileData.read()
         
