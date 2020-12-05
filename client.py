@@ -20,7 +20,7 @@ def connect(address, port):
 
 def put_file(sock, address, fileName):
     # grab files only from client folder
-    filePath = const.CLIENT_FOLDER + fileName
+    filePath = clientFolder + fileName
 
     # open file and get file size
     try:
@@ -44,7 +44,7 @@ def put_file(sock, address, fileName):
     
     # make file size and file name headers
     fileNameSize = size_padding(len(fileName), const.HEADER_SIZE)
-    fileDataSize = size_padding(fileSize, const.HEADER_SIZE)
+    fileDataSize = size_padding(fileSize, headerSize)
     fileData = userFile.read()
     
     # add headers to payload
