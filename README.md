@@ -4,7 +4,7 @@ Project Assignment for CPSC 471
 Jared Castaneda - jaredcast@csu.fullerton.edu - Section 1
 Ricardo Martinez - Rickym72@csu.fullerton.edu - Section 1
 Hammad Qureshi - qureshi434@csu.fullerton.edu - Section 4
-Omar Ramirez - ramirez97@csu.fullerton.edu
+Omar Ramirez - ramirez97@csu.fullerton.edu - section 1
 
 Language used: Python 3.9.0
 
