@@ -45,7 +45,6 @@ import os
 import struct
 
 print("\nWelcome to the FTP server.\n\nTo get started, connect a client.")
-
 # Initialise socket stuff
 TCP_IP = "127.0.0.1" # Only a local server
 TCP_PORT = 1456 # Just a random choice
@@ -55,7 +54,7 @@ s.bind((TCP_IP, TCP_PORT))
 s.listen(1)
 conn, addr = s.accept()
 
-print("\nConnected to by address: {}").format(addr)
+print("\nConnected to by address: {}".format(addr))
 
 def upld():
 	# Send message once server is ready to recieve file details
@@ -162,7 +161,7 @@ def delf():
 			conn.send(struct.pack("i", 1))
 		except:
 			# Unable to delete file
-			print("Failed to delete {}").format(file_name)
+			print("Failed to delete {}".format(file_name))
 			conn.send(struct.pack("i", -1))
 	else:
 	# User abandoned deletion
@@ -183,7 +182,7 @@ def quit():
 	# Enter into a while loop to recieve commands from client
 		print("\n\nWaiting for instruction")
 		data = conn.recv(BUFFER_SIZE)
-		print("\nRecieved instruction: {}").format(data)
+		print("\nRecieved instruction: {}".format(data))
 		# Check the command and respond correctly
 		if data == "UPLD":
 			upld()

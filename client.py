@@ -49,7 +49,7 @@ def conn():
 
 def upld(file_name):
 	# Upload a file
-	print("\nUploading file: {}...").format(file_name)
+	print("\nUploading file: {}...".format(file_name))
 	try:
 		# Check the file exists
 		content = open(file_name, "rb")
@@ -86,7 +86,7 @@ def upld(file_name):
 			# Get upload performance details
 			upload_time = struct.unpack("f", s.recv(4))[0]
 			upload_size = struct.unpack("i", s.recv(4))[0]
-			print("\nSent file: {}\nTime elapsed: {}s\nFile size: {}b").format(file_name, upload_time, upload_size)
+			print("\nSent file: {}\nTime elapsed: {}s\nFile size: {}b".format(file_name, upload_time, upload_size))
 	except:
 		print ("Error sending file")
 		return
@@ -117,7 +117,7 @@ def list_files():
 			s.send("1")
 			# Get total size of directory
 			total_directory_size = struct.unpack("i", s.recv(4))[0]
-			print ("Total directory size: {}b").format(total_directory_size)
+			print ("Total directory size: {}b".format(total_directory_size))
 	except:
 		print("Couldn't retrieve listing")
 		return
@@ -132,7 +132,7 @@ def list_files():
 
 def dwld(file_name):
 	# Download given file
-	print("Downloading file: {}").format(file_name)
+	print("Downloading file: {}".format(file_name))
 	try:
 		# Send server request
 		s.send("DWLD")
@@ -166,12 +166,12 @@ def dwld(file_name):
 			output_file.write(l)
 			bytes_recieved += BUFFER_SIZE
 			output_file.close()
-			print("Successfully downloaded {}").format(file_name)
+			print("Successfully downloaded {}".format(file_name))
 		# Tell the server that the client is ready to recieve the download performance details
 		s.send("1")
 		# Get performance details
 		time_elapsed = struct.unpack("f", s.recv(4))[0]
-		print("Time elapsed: {}s\nFile size: {}b").format(time_elapsed, file_size)
+		print("Time elapsed: {}s\nFile size: {}b".format(time_elapsed, file_size))
 	except:
 		print ("Error downloading file")
 	return
@@ -180,7 +180,7 @@ def dwld(file_name):
 
 def delf(file_name):
 	# Delete specified file from file server
-	print("Deleting file: {}...").format(file_name)
+	print("Deleting file: {}...".format(file_name))
 	try:
 		# Send resquest, then wait for go-ahead
 		s.send("DELF")
