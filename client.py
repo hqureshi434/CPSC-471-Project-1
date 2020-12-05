@@ -7,6 +7,17 @@ serverFolder = "./serverFiles/"
 clientFolder = "./clientFiles/"
 commands = ["get", "put", "ls", "quit"]
 
+#Connect to the port in the header
+def connect(address, port):
+    try:
+        serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        serverSocket.connect((address, port))
+        print("Connected to " + address + " on port " + str(port))
+    except Exception as e:
+        print(e)
+        return None
+    return serverSocket
+
 def put_file(sock, address, fileName):
     # grab files only from client folder
     filePath = const.CLIENT_FOLDER + fileName
